@@ -1,3 +1,6 @@
+## Management System
+고객 관리 시스템
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
