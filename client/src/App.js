@@ -20,7 +20,6 @@ const styles = theme => ({
   }
 })
 
-
 const customers = [{
   'id':1,
   'image':"https://placeimg.com/64/64/1",
