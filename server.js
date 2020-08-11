@@ -10,7 +10,7 @@ const data = fs.readFileSync('./database.json');
 const conf = JSON.parse(data);
 const mysql = require('mysql');
 const multer = require('multer');
-const upload = multer({dest:'./upload'})
+const upload = multer({dest:'upload/',limits:{filesize:5*1024*1024}});
 
 
 const connection = mysql.createConnection({
@@ -40,11 +40,6 @@ app.post('/api/customers',upload.single('image'),(req,res)=>{
     let birthday = req.body.birthday;
     let gender = req.body.gender;
     let job = req.body.job;
-    console.log(name);
-    console.log(image);
-    console.log(birthday);
-    console.log(gender);
-    console.log(job);
     let params = [image, name, birthday, gender, job];
     connection.query(sql,params,
       (err, rows, fields)=>{

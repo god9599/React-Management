@@ -19,6 +19,7 @@ class customerAdd extends React.Component{
         this.addCustomer()
             .then((response)=>{
                 console.log(response.data);
+                this.props.stateRefresh();
             })
             this.setState({
                 file : null,
@@ -28,7 +29,6 @@ class customerAdd extends React.Component{
                 job : '',
                 fileName : ''
             })
-            window.location.reload();
     }
 
     handlerFileChange = (e) => {
@@ -61,7 +61,7 @@ class customerAdd extends React.Component{
         }
     render(){
         return(
-            <form onSubmit={this.handlerForSubmit}>
+            <form onSubmit= {this.handlerForSubmit}>
                 <h1>고객 추가</h1>
                 프로필 이미지: <input type="file" name="file" file={this.state.file} value={this.state.fileName} onChange={this.handlerFileChange} /><br/>
                 이름 : <input type = "text" name ="userName" value = {this.state.userName} onChange={this.handleValueChange}/><br/>

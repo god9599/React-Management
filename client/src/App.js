@@ -28,10 +28,24 @@ const styles = theme => ({
 
 class App extends Component{
   //변경될 수 있는 변수 처리
-  state = {
-    customers:"",
-    completed : 0
+  constructor(props){
+    super(props);
+    this.state = {
+      customers:'',
+      completed : 0
+    }
   }
+
+  stateRefresh = () => {
+    this.setState({
+      customers : '',
+      completed : 0
+    });
+    this.callApi()
+      .then(res=>this.setState({customers:res}))
+      .catch(err=>console.log(err));
+  }
+
   //api서버에 접근해서 데이터 받아오기
   componentDidMount(){
     this.timer = setInterval(this.progress,20);
@@ -88,7 +102,7 @@ class App extends Component{
             </TableBody>
           </Table>
         </Paper>
-      <CustomerAdd/> 
+      <CustomerAdd stateRefresh = {this.stateRefresh}/> 
       </div>
     );
   }
