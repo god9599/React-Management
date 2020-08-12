@@ -1,7 +1,6 @@
 import React from 'react';
 import {post} from 'axios';
 import Dialog from '@material-ui/core/Dialog';
-import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -111,10 +110,10 @@ class customerAdd extends React.Component{
                             </Button>
                         </label>
                         <br/>
-                        <TextField lable="이름"  type = "text" name ="userName" value = {this.state.userName} onChange={this.handleValueChange}/><br/>
-                        <TextField lable="생년월일"  type = "text" name = "birthday" value = {this.state.birthday} onChange={this.handleValueChange}/><br/>
-                        <TextField lable="성별"  type = "text" name ="gender" value = {this.state.gender} onChange={this.handleValueChange}/><br/>
-                        <TextField lable="직업"  type = "text" name ="job" value = {this.state.job} onChange={this.handleValueChange}/><br/>
+                        <TextField label="이름"  type = "text" name ="userName" value = {this.state.userName} onChange={this.handleValueChange}/><br/>
+                        <TextField label="생년월일"  type = "text" name = "birthday" value = {this.state.birthday} onChange={this.handleValueChange}/><br/>
+                        <TextField label="성별"  type = "text" name ="gender" value = {this.state.gender} onChange={this.handleValueChange}/><br/>
+                        <TextField label="직업"  type = "text" name ="job" value = {this.state.job} onChange={this.handleValueChange}/><br/>
                     </DialogContent>
                     <DialogActions>
                         <Button variant="contained" color="primary" onClick={this.handleFormSubmit}>추가</Button>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
-import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -48,7 +47,7 @@ class CustomerDelete extends React.Component{
                 </DialogContent>
                 <DialogActions>
                     <Button variant="contained" color="primary" onClick={(e)=>{this.deleteCustomer(this.props.id)}}>삭제</Button>
-                    <Button variant="outlined" color="primary" onClick={(e)=>{this.handleClose(this.props.id)}}>삭제</Button>
+                    <Button variant="outlined" color="primary" onClick={(e)=>{this.handleClose(this.props.id)}}>취소</Button>
                 </DialogActions>
                 </Dialog>
             </div>
