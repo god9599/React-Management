@@ -1,5 +1,5 @@
 ## Management System
-고객 관리 시스템
+Node.js와 React.js를 사용한 고객 관리 시스템
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
